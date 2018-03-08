@@ -1,7 +1,7 @@
 {
   "name": "nc",
   "version": "0.0.1",
-  "private": true,
+  "description": "A \"Hello world\" demo that written in typescript with react-native.",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "watch": "gulp watch --max_old_space_size=2048",
