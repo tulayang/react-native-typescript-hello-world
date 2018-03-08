@@ -2,16 +2,6 @@ import * as React from 'react'
 import { Component } from 'react'
 import { Platform, StyleSheet, Text, View } from 'react-native'
 
-const INSTRUCTIONS = Platform.select({
-  ios: 
-`Press Cmd+R to reload,
-Cmd+D or shake for dev menu`,
-
-  android: 
-`Double tap R on your keyboard to reload,
-Shake or press menu button for dev menu`
-})
-
 export class App extends Component<{}> {
   private static STYLES = StyleSheet.create({
     container: {
@@ -32,6 +22,16 @@ export class App extends Component<{}> {
     },
   })
 
+  private static TEXT_INSTRUCTIONS = Platform.select({
+    ios: 
+`Press Cmd+R to reload,
+Cmd+D or shake for dev menu`,
+
+    android: 
+`Double tap R on your keyboard to reload,
+Shake or press menu button for dev menu`
+})
+
   public render(): JSX.Element {
     return (
       <View style={App.STYLES.container}>
@@ -44,7 +44,7 @@ export class App extends Component<{}> {
         </Text>
 
         <Text style={App.STYLES.instructions}>
-          {INSTRUCTIONS}
+          {App.TEXT_INSTRUCTIONS}
         </Text>
       </View>
     )
